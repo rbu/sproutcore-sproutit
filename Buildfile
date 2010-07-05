@@ -76,7 +76,7 @@ config :standard_theme,
 
 # CONFIGURE APPS
 
-config :core_tools, :required => [:desktop]
+config :core_tools, :required => [:desktop, :datastore]
 
 # mode :debug do
 #   config :core_tools, :combine_javascript => false
@@ -84,7 +84,7 @@ config :core_tools, :required => [:desktop]
 
 %w(tests docs welcome).each do |app_target|
   config app_target, 
-    :required => [:desktop, :core_tools], 
+    :required => [:desktop, :datastore, :core_tools], 
     :theme => :standard_theme
     
   # mode :debug do
