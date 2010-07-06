@@ -164,7 +164,7 @@ SC.GridView = SC.ListView.extend(
   // // We can do this much faster programatically using the rowHeight
   insertionIndexForLocation: function(loc, dropOperation) {  
     var f = this.get('frame') ;
-    var sf = this.get('scrollFrame') ;
+    var sf = this.get('scrollFrame') || {x: 0, y: 0};
     
     var itemsPerRow = this.get('itemsPerRow') ; 
     var columnWidth = Math.floor(f.width / itemsPerRow) ;
